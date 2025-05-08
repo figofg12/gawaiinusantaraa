@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gawai Nusantara</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        body {
+  background-color: #F5F5F7;
+}
+        /* Reset all elements using .reset-all */
+.reset-all {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slider {
+  position: relative;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+.footer{
+  background-color: #F5F5F7;
+}
+.containerinfo{
+  z-index: 9989898989;
+}
+    </style>
+
+    <!--Icon-->
+    
+  </head>
+  <body>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!--Navbar start-->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Gawai <span>Nusantara</span> </a>
+      <div class="navbar-nav">
+        <a href="#home"><img src="Apple_logo_white.svg.png" style="width: 15px;" height="auto" class="apple_icon"></a>
+        <a href="mac.html">Mac</a>
+        <a href="ipad.html">iPad</a>
+        <a href="iphone.html">iPhone</a>
+        <a href="watch.html">Watch</a>
+        <a href="airpods.html">Airpods</a>
+        <a href="tentangkami.html">Tentang Kami</a>
+        <a href="tentangkami.html">Kontak Kami</a>
+        <a href="register.html">Masuk/Daftar</a>
+      </div>
+      <div class="navbar-extra">
+        <div class="navbar-extra">
+          
+          <a href="checkout.html" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
+          <a href="#" id="menu"><i data-feather="menu"></i></a>
+        </div>
+      </div>
+      <!-- Search -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box"><i data-feather="search"></i></label>
+       </div>
+      </div>
+    </nav>
+    <!--Navbar end-->
+
+    <div class="aipon66">
+        <img src="kakak (7).png" alt="iPhone 16">
+    </div>
+
+    <div class="containerinfo">
+        <div class="card12">
+          <img src="kesehatan (1).png" alt="Image 1">
+        </div>
+        <div class="card12">
+          <img src="audio spasial (2).png" alt="Image 2">
+        </div>
+        <div class="card12">
+          <img src="peredam (1).png" alt="Image 3">
+        </div>
+    </div>
+      
+    <div class="aipon2325499">
+      <a href="spekairpods.html">
+        <button class="btn-selengkapnya18879209">Selengkapnya</button>
+      </a>
+      <img src="spekpods (1).png" alt="iPhone 16">
+    </div>
+    
+
+    <section class="checkout-section13">
+      <h2>Bawa pulang iWatch impian Anda.</h2>
+      <br><br>
+      <div class="checkout-container">
+        
+        <!-- Product Card 1 -->
+        <div class="checkout-card" id="product1">
+            <img src="ipod 4.png" alt="MacBook Air">
+            <h2>AirPods 4</h2>
+          <p>Evolusi selanjutnya bagi suara. Ekonomis</p>
+          <p class="old-price">Rp 2.999.999</p>
+          <p class="new-price">Rp 2.799.999 <span class="discount">10%</span></p>
+          <a href="checkout.html" class="btn-beli" onclick="addToCart('AirPods 4', 2799999, 'ipod biasa.png')">Beli Sekarang</a>
+        </div>
+    
+        <!-- Product Card 2 -->
+        <div class="checkout-card" id="product1">
+          <img src="ipod biasa.png">
+          <h2>AirPods 4 Peredam</h2>
+            <p>Evolusi selanjutnya, kenyamanan, dan kontrol kebisingan.</p>
+            <p class="old-price">Rp 3.999.999</p>
+            <p class="new-price">Rp 4.699.999 <span class="discount">10%</span></p>
+            <a href="checkout.html" class="btn-beli" onclick="addToCart('AirPods 4 Peredam', 4699999, 'aipod pro.png')">Beli Sekarang</a>
+        </div>
+
+        <div class="checkout-card" id="product1">
+            <img src="aipod pro.png">
+            <h2>AirPods Pro</h2>
+            <p>Peredam Kebisingan Aktif level pro. Kemajuan dalam pendengaran.</p>
+            <p class="old-price">Rp 6.999.999</p>
+            <p class="new-price">Rp 5.499.999 <span class="discount">16%</span></p>
+            <a href="checkout.html" class="btn-beli" onclick="addToCart('AirPods Pro', 5499999, 'aipod pro.png')">Beli Sekarang</a>
+        </div>
+        <div class="checkout-card" id="product1">
+            <img src="ipod maks.png">
+            <h2>AirPods Max</h2>
+            <p>Pengalaman audio dengan desain telinga tertutup terbaik.</p>
+            <p class="old-price">Rp 9.999.999</p>
+            <p class="new-price">Rp 8.999.999 <span class="discount">10%</span></p>
+            <a href="checkout.html" class="btn-beli" onclick="addToCart('AirPods Max', 8999999, 'ipod maks.png')">Beli Sekarang</a>
+        </div>
+      </div>
+    </section>
+
+    
+    
+    <div class="video-container24">
+      <video autoplay muted loop >
+          <source src="hmmmmmm - Made with Clipchamp.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+    </div>
+
+    
+    
+
+    <footer class="footer">
+      <div class="footer-left">
+        <p><span>🕒</span> Jam 09:00 - 18:00</p>
+        <p><span>📧</span> Email : <a href="mailto:customercare@erajaya.com">customercare@erajaya.com</a></p>
+        <p><span>📞</span> Contact Center : <a href="tel:1500372">1500372</a></p>
+        <p><span>📱</span> WhatsApp : <a href="https://wa.me/6281290777722">0812 9077 7722</a></p>
+
+        <br>
+        <br><br><br> <br>
+  
+        <div class="pengaduan">
+          <h3>Layanan Pengaduan Konsumen</h3>
+          <p>Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga<br>
+          Kementerian Perdagangan Republik Indonesia</p>
+          <p>WhatsApp Ditjen PKTN:<br><strong>0853-1111-1010</strong></p>
+        </div>
+      </div>
+  
+      <div class="footer-right">
+        <div class="sosmed-icons">
+          <span><img src="logoicon (1).png" alt=""></span><span><img src="logoicon (2).png" alt=""></span><span><img src="logoicon (3).png" alt=""></span><span><img src="logoicon (4).png" alt=""></span><span><img src="logoicon (5).png" alt=""></span><span><img src="logoicon (6).png" alt=""></span>
+        </div>
+  
+        <h3>Metode Pembayaran</h3>
+        <div class="payments">
+          <img src="payment-footer-maret-2025.webp" alt="Metode Pembayaran">
+          <br>
+        </div>
+  
+        <h3>Jasa Pengiriman</h3>
+        <div class="shipping">
+          <img src="shipping (1).webp" alt="Jasa Pengiriman">
+        </div>
+      </div>
+    </footer>
+    
+    
+    
+      
+
+ 
+     
+
+
+    <!--Hero section end-->
+    
+    <!--Menu section start-->
+   
+    
+    
+    
+  
+
+
+
+    <!--Menu section end-->
+    <div id="checkout-modal" class="modal">
+      <div class="modal-container">
+        <a href="#" class="close-modal"><i data-feather="x"></i></a>
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+          <label for="name">Nama:</label>
+          <input type="text" id="name" name="name" required placeholder="Masukkan nama lengkap"/>
+    
+          <label for="phone">Nomor HP:</label>
+          <input type="text" id="phone" name="phone" required placeholder="08922334161930"/>
+                                   
+          <label>Metode Pengambilan:</label>
+          <div>
+              <select id="metode-pengambilan">
+                  <option value="pickup">Pickup mandiri</option>
+                  <option value="diantar">Diantar</option>
+              </select>
+          </div>
+          
+          <label>Pembayaran:</label>
+          <div>
+              <select id="metode-pengambilan">
+                  <option value="Cash">Cash</option>
+                  <option value="Kartu Debit">Kartu Debit</option>
+                  <option value="Kartu Kredit">Kartu Kredit</option>
+              </select>
+          </div>
+    
+          <div id="alamat-field" style="display: none;">
+              <label for="alamat">Alamat:</label>
+              <input type="text" id="alamat" name="alamat" placeholder="Masukkan alamat">
+          </div>
+    
+    
+    
+          <h3>Pesanan Anda:</h3>
+          <ul id="order-summary"></ul>
+    
+          <p><strong>Total: <span id="total-price">Rp. 0</span></strong></p>
+    
+          <button type="submit" id="checkout-btn">Konfirmasi Pembelian</button>
+        </form>
+      </div>
+    </div>
+    <!--Feather icon-->
+    <script>
+      feather.replace();
+    </script>
+
+    <!--Js-->
+    <script>
+      window.addEventListener('scroll', function () {
+        var image = document.querySelector('.stacked-image');
+        var imagePosition = image.getBoundingClientRect().top;
+        var windowHeight = window.innerHeight;
+  
+        if (imagePosition < windowHeight * 0.8) { // Mulai muncul saat 80% gambar terlihat
+          image.classList.add('visible');
+        } else {
+          image.classList.remove('visible');
+        }
+      });
+
+      let lastScrollTop = 0; // Variabel untuk menyimpan posisi scroll sebelumnya
+
+window.addEventListener("scroll", function() {
+    let navbar = document.querySelector(".navbar");
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Jika scroll ke bawah, sembunyikan navbar
+    if (currentScroll > lastScrollTop) {
+        navbar.style.top = "-100px";  // Atur angka ini sesuai tinggi navbar kamu
+    } else {
+        navbar.style.top = "0";  // Tampilkan navbar saat scroll ke atas
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Menghindari nilai negatif
+});
+
+function addToCart(productName, productPrice, productImage) {
+            const product = {
+                name: productName,
+                price: productPrice,
+                image: productImage,
+                quantity: 1, // Set jumlah produk ke 1 saat pertama kali ditambahkan
+            };
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || []; // Ambil data keranjang dari localStorage
+            const existingProduct = cart.find(item => item.name === productName); // Cek apakah produk sudah ada
+
+            if (existingProduct) {
+                existingProduct.quantity += 1; // Tambahkan jumlah produk jika sudah ada
+            } else {
+                cart.push(product); // Jika produk belum ada, tambahkan produk baru
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart)); // Simpan keranjang kembali ke localStorage
+            alert("Produk berhasil ditambahkan ke keranjang!");
+        }
+
+        window.onload = function() {
+  // Menambahkan kelas 'show' pada elemen .aipon55 setelah halaman dimuat
+  document.querySelector('.aipon66').classList.add('show');
+};
+
+
+
+    </script>
+
+    <script>
+      let slideIndex = 0;
+
+function moveSlide(direction) {
+  const slides = document.querySelectorAll('.slide');
+  slideIndex += direction;
+
+  if (slideIndex < 0) {
+    slideIndex = slides.length - 1;
+  }
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  }
+
+  document.querySelector('.slides').style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+
+// Optional: Auto-slide feature
+setInterval(() => {
+  moveSlide(1);
+}, 3000);  // Change slide every 3 seconds
+
+    </script>
+      
+    <script src="script.js"></script>
+  </body>
+</html>

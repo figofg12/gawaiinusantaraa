@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Watch - Spesifikasi Teknis Watch - Apple (ID)</title>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        
+        
+        .imac-body {
+            color: #1d1d1f;
+            background-color: #ffffff;
+            font-size: 17px;
+            line-height: 1.47059;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+        }
+        
+        .imac-container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 22px;
+        }
+        
+        .imac-header {
+            background-color: rgba(245, 245, 247, 0.7);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            height: 44px;
+            border-bottom: 1px solid #d2d2d7;
+        }
+        
+        .imac-global-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 44px;
+        }
+        
+        .imac-nav-list {
+            display: flex;
+            list-style: none;
+        }
+        
+        .imac-nav-list li {
+            margin-right: 22px;
+        }
+        
+        .imac-nav-list a {
+            color: #1d1d1f;
+            text-decoration: none;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        
+        .imac-nav-list a:hover {
+            opacity: 1;
+        }
+        
+        .imac-apple-logo {
+            width: 16px;
+            height: 44px;
+            background-size: 16px 44px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url("/api/placeholder/16/44");
+        }
+        
+        .imac-hero {
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .imac-h1 {
+            font-size: 48px;
+            line-height: 1.08349;
+            font-weight: 600;
+            letter-spacing: -0.003em;
+            margin-bottom: 8px;
+        }
+        
+        .imac-subtitle {
+            font-size: 24px;
+            line-height: 1.16667;
+            font-weight: 600;
+            letter-spacing: .009em;
+            margin-bottom: 30px;
+        }
+        
+        .imac-breadcrumbs {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .imac-breadcrumbs li {
+            font-size: 12px;
+            color: #515154;
+        }
+        
+        .imac-breadcrumbs li:not(:last-child)::after {
+            content: ">";
+            margin: 0 5px;
+        }
+        
+        .imac-breadcrumbs a {
+            color: #06c;
+            text-decoration: none;
+        }
+        
+        .imac-nav-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        
+        .imac-nav-button {
+            margin: 0 12px;
+            text-decoration: none;
+            color: #06c;
+            font-size: 17px;
+        }
+        
+        .imac-spec-section {
+            padding: 50px 0;
+            border-bottom: 1px solid #d2d2d7;
+        }
+        
+        .imac-section-title {
+            font-size: 24px;
+            line-height: 1.16667;
+            font-weight: 600;
+            letter-spacing: .009em;
+            margin-bottom: 15px;
+            text-align: center;
+            margin-top: 2.5%;
+        }
+        
+        .imac-compare-row {
+            display: flex;
+            margin-bottom: 40px;
+        }
+        
+        .imac-compare-col {
+            flex: 1;
+            padding-right: 30px;
+        }
+        
+        .imac-compare-col h3 {
+            font-size: 21px;
+            line-height: 1.19048;
+            font-weight: 600;
+            letter-spacing: .011em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .imac-compare-col img {
+            width: 100%;
+            height: auto;
+            
+            border-radius: 3%;
+        }
+        
+        .imac-compare-col p {
+            font-size: 17px;
+            line-height: 1.47059;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+            margin-bottom: 12px;
+        }
+        
+        .imac-compare-col ul {
+            list-style-position: outside;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .imac-compare-col li {
+            margin-bottom: 8px;
+        }
+        
+        .imac-spec-table {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        
+        .imac-spec-table th {
+            text-align: left;
+            padding: 10px 0;
+            font-weight: 600;
+            border-bottom: 1px solid #d2d2d7;
+        }
+        
+        .imac-spec-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid #d2d2d7;
+        }
+        
+        .imac-spec-table td:first-child {
+            width: 25%;
+            font-weight: 600;
+        }
+        
+        .imac-color-options {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .imac-color-option {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+        
+        .imac-blue {
+            background-color: #0071e3;
+        }
+        
+        .imac-green {
+            background-color: #68cc45;
+        }
+        
+        .imac-pink {
+            background-color: #ff9500;
+        }
+        
+        .imac-silver {
+            background-color: #a1a1a6;
+        }
+        
+        .imac-purple {
+            background-color: #bf4800;
+        }
+        
+        .imac-yellow {
+            background-color: #ffd60a;
+        }
+        
+        .imac-orange {
+            background-color: #ff3b30;
+        }
+        
+        .imac-footer {
+            background-color: #f5f5f7;
+            padding: 40px 0;
+            font-size: 12px;
+            color: #86868b;
+        }
+        
+        .imac-footer-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .imac-footer-col {
+            width: 20%;
+            margin-bottom: 20px;
+        }
+        
+        .imac-footer-col h4 {
+            font-size: 12px;
+            margin-bottom: 10px;
+            color: #1d1d1f;
+        }
+        
+        .imac-footer-col ul {
+            list-style: none;
+        }
+        
+        .imac-footer-col li {
+            margin-bottom: 8px;
+        }
+        
+        .imac-footer-col a {
+            color: #515154;
+            text-decoration: none;
+        }
+        
+        .imac-footer-col a:hover {
+            text-decoration: underline;
+        }
+        
+        .imac-legal {
+            border-top: 1px solid #d2d2d7;
+            padding-top: 20px;
+            font-size: 12px;
+            color: #86868b;
+        }
+        
+        .imac-legal p {
+            margin-bottom: 10px;
+        }
+        
+        .imac-legal-links {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .imac-legal-links a {
+            color: #515154;
+            text-decoration: none;
+            margin-right: 10px;
+            position: relative;
+        }
+        
+        .imac-legal-links a:not(:last-child)::after {
+            content: "|";
+            position: absolute;
+            right: -7px;
+        }
+        
+        .imac-legal-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<script>
+    feather.replace();
+  </script>
+<body class="imac-body">
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Gawai <span>Nusantara</span> </a>
+        <div class="navbar-nav">
+          <a href="index.html"><img src="Apple_logo_white.svg.png" style="width: 15px;" height="auto" class="apple_icon"></a>
+          <a href="mac.html">Mac</a>
+          <a href="ipad.html">iPad</a>
+          <a href="iphone.html">iPhone</a>
+          <a href="watch.html">Watch</a>
+          <a href="airpods.html">Airpods</a>
+          <a href="tentangkami.html">Tentang Kami</a>
+          <a href="tentangkami.html">Kontak Kami</a>
+          <a href="register.html">Masuk/Daftar</a>
+        </div>
+        <div class="navbar-extra">
+          <div class="navbar-extra">
+            
+            <a href="checkout.html" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
+            <a href="#" id="menu"><i data-feather="menu"></i></a>
+          </div>
+        </div>
+        <!-- Search -->
+        <div class="search-form">
+          <input type="search" id="search-box" placeholder="search here...">
+          <label for="search-box"><i data-feather="search"></i></label>
+         </div>
+        </div>
+      </nav>
+    
+
+    <main class="imac-main">
+        <div class="imac-container">
+            
+
+            <section class="imac-spec-section">
+                <h2 class="imac-section-title">Bandingkan Model Watch</h2>
+                <div class="imac-compare-row">
+                    <div class="imac-compare-col">
+                        
+                        <img src="clasiscringan.png" alt="iMac 24 inch">
+                    </div>
+                </div>
+            </section>
+
+            <section class="imac-spec-section">
+                <h2 class="imac-section-title">Ukuran</h2>
+                <table class="imac-spec-table">
+                    <tr>
+                        <td>Layar</td>
+                        <td>       
+                            40mm (324 x 394 piksel); 44mm (368 x 448 piksel) <br>
+                            
+                            LTPO OLED Retina display dengan Force Touch
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kecerahan</td>
+                        <td>1000 nits maksimum</td>
+                    </tr>
+                    <tr>
+                        <td>Teknologi Warna</td>
+                        <td>Wide color (P3)</td>
+                    </tr>
+                    <tr>
+                        <td>True Tone</td>
+                        <td>Teknologi True Tone</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="imac-spec-section">
+                <h2 class="imac-section-title">Chip</h2>
+                <table class="imac-spec-table">
+                    <tr>
+                        <td>Prosesor</td>
+                        <td>
+                            Chip S6 SiP 64-bit dual-core
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Chip</td>
+                        <td>
+                            W3 
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="imac-spec-section">
+                <h2 class="imac-section-title">Baterai</h2>
+                <table class="imac-spec-table">
+                    <tr>
+                        <td>Daya Tahan</td>
+                        <td>
+                            
+Hingga 18 jam penggunaan normal
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pengisian</td>
+                        <td>
+                            
+Pengisian daya magnetik
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Waktu Pengisian</td>
+                        <td>
+                            Kurang dari 2,5 jam hingga penuh
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            
+
+            <section class="imac-spec-section">
+                <h2 class="imac-section-title">Konektivitas</h2>
+                <table class="imac-spec-table">
+                    <tr>
+                        <td>Seluler</td>
+                        <td>LTE/4G/5G</td>
+                    </tr>
+                    <tr>
+                        <td>Wi-Fi</td>
+                        <td>Wi-Fi 6E (802.11ax)</td>
+                    </tr>
+                    <tr>
+                        <td>Bluetooth</td>
+                        <td>Bluetooth 5.3</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="imac-spec-section">
+                <h2 class="imac-section-title">Port dan Ekspansi</h2>
+                <table class="imac-spec-table">
+                    <tr>
+                        <td>Sensor</td>
+                        <td>
+                            <ul>
+                                
+Sensor detak jantung optik generasi kedua, sensor listrik detak jantung, akselerometer dengan jangkauan dinamis hingga 32 g, giroskop, sensor cahaya ambien, altimeter
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            
+            <section class="imac-spec-section">
+                <h2 class="imac-section-title">Aksesori dalam Kemasan</h2>
+                <table class="imac-spec-table">
+                    <tr>
+                        <td>Aksesori</td>
+                        <td>
+                            <br>
+                            Kabel anyaman USB-C ke USB-C
+                            <br>
+                            Adaptor Daya 20W
+                            <br>
+                            Kabel Daya
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="imac-spec-section">
+                <h2 class="imac-section-title">Sistem Operasi</h2>
+                <table class="imac-spec-table">
+                    <tr>
+                        <td>
+                            watchOS </td>
+                        <td>
+                            watchOS 8</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </main>
+
+   
+
+    <footer class="footer">
+        <div class="footer-left">
+          <p><span>🕒</span> Jam 09:00 - 18:00</p>
+          <p><span>📧</span> Email : <a href="mailto:customercare@erajaya.com">customercare@erajaya.com</a></p>
+          <p><span>📞</span> Contact Center : <a href="tel:1500372">1500372</a></p>
+          <p><span>📱</span> WhatsApp : <a href="https://wa.me/6281290777722">0812 9077 7722</a></p>
+  
+          <br>
+          <br><br><br> <br>
+    
+          <div class="pengaduan">
+            <h3>Layanan Pengaduan Konsumen</h3>
+            <p>Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga<br>
+            Kementerian Perdagangan Republik Indonesia</p>
+            <p>WhatsApp Ditjen PKTN:<br><strong>0853-1111-1010</strong></p>
+          </div>
+        </div>
+    
+        <div class="footer-right">
+          <div class="sosmed-icons">
+            <span><img src="logoicon (1).png" alt=""></span><span><img src="logoicon (2).png" alt=""></span><span><img src="logoicon (3).png" alt=""></span><span><img src="logoicon (4).png" alt=""></span><span><img src="logoicon (5).png" alt=""></span><span><img src="logoicon (6).png" alt=""></span>
+          </div>
+    
+          <h3>Metode Pembayaran</h3>
+          <div class="payments">
+            <img src="payment-footer-maret-2025.webp" alt="Metode Pembayaran">
+            <br>
+          </div>
+    
+          <h3>Jasa Pengiriman</h3>
+          <div class="shipping">
+            <img src="shipping (1).webp" alt="Jasa Pengiriman">
+          </div>
+        </div>
+      </footer>
+      <script>
+         let lastScrollTop = 0; // Variabel untuk menyimpan posisi scroll sebelumnya
+
+window.addEventListener("scroll", function() {
+    let navbar = document.querySelector(".navbar");
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Jika scroll ke bawah, sembunyikan navbar
+    if (currentScroll > lastScrollTop) {
+        navbar.style.top = "-100px";  // Atur angka ini sesuai tinggi navbar kamu
+    } else {
+        navbar.style.top = "0";  // Tampilkan navbar saat scroll ke atas
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Menghindari nilai negatif
+});
+      </script>
+</body>
+</html>

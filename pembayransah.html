@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proses Transaksi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Gawai <span>Nusantara</span> </a>
+        <div class="navbar-nav">
+          <a href="index.html"><img src="Apple_logo_white.svg.png" style="width: 15px;" height="auto" class="apple_icon"></a>
+          <a href="mac.html">Tentang Kami</a>
+          <a href="tentangkami.html">Kontak Kami</a>
+          <a href="register.html">Masuk/Daftar</a>
+        </div>
+        <div class="navbar-extra">
+          <div class="navbar-extra">
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            
+            <a href="#" id="menu"><i data-feather="menu"></i></a>
+          </div>
+        </div>
+        
+        </div>
+      </nav>
+
+    <div class="transaction-container">
+        <h1>Proses Transaksi</h1>
+    
+        <!-- Metode Pemesanan -->
+        <div class="order-method-container">
+            <label for="method">Metode Pemesanan:</label>
+            <div class="radio-group">
+                <label class="radio-option">
+                    <input type="radio" name="metode" id="belanja-online" checked>
+                    <span class="radio-label">Belanja online</span>
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="metode" id="click-pickup">
+                    <span class="radio-label">Click & Pickup</span>
+                </label>
+            </div>
+            <hr>
+        </div>
+
+        
+        
+        <!-- Informasi Pengambilan -->
+<div id="pickup-info-section" class="info-section-container" style="display:none;">
+    <h2>Informasi Pengambilan</h2>
+    <select id="pickup-location" name="pickup-location">
+        <option value="" disabled selected>-- Pilih Lokasi --</option>
+        <option value="location-1">Gawai Nusantara Demang</option>
+        <option value="location-2">Gawai Nusantara Palembang Icon</option>
+        <option value="location-3">Gawai Nusantara PS Mall</option>
+        <option value="location-4">Gawai Nusantara PTC Mall</option>
+    </select>
+</div>
+
+<!-- Informasi Pengambilan (Ambil Sendiri atau Diwakilkan) -->
+<div id="pickup-role-section" class="info-section-container" style="display:none;">
+    <h2>Opsi Pengambilan</h2>
+    <select id="pickup-location" name="pickup-location">
+        <option value="" disabled selected>-- Ambil sendiri atau diwakilkan --</option>
+        <option value="ambilsendiri">Ambil Sendiri</option>
+        <option value="diwakilkan">Diwakilkan</option>
+    </select>
+</div>
+
+<!-- Informasi Pengambilan (Jika Klik & Pickup) -->
+<div id="infomasiambil-info-section" class="info-section-container" style="display:none;">
+    <h3>Informasi Pengambilan</h3>
+    <input type="text" id="delivery-nik-input" placeholder="NIK">
+    <input type="text" id="delivery-namalengkap-input" placeholder="Nama Lengkap">
+    <input type="text" id="delivery-nmrtelpon-input" placeholder="Nomor Telepon">
+    <input type="text" id="delivery-detaillainnya-input" placeholder="Detail Lainnya">
+</div>
+        
+        
+        <!-- Informasi Pengiriman -->
+        <div id="delivery-info-section" class="info-section-container" style="display:none;">
+            <h3>Informasi Pengiriman</h3>
+            <input type="text" id="delivery-name-input" placeholder="Nama Lengkap">
+            <input type="text" id="delivery-nmr-input" placeholder="Nomor Telepon">
+            
+            <select id="delivery-provinsi-input" name="pickup-location">
+                <option value="" disabled selected>Provinsi</option>
+                <option value="aceh">Aceh</option>
+    <option value="bali">Bali</option>
+    <option value="banten">Banten</option>
+    <option value="bengkulu">Bengkulu</option>
+    <option value="gandaria">Gandaria</option>
+    <option value="gorontalo">Gorontalo</option>
+    <option value="jakarta">DKI Jakarta</option>
+    <option value="jambi">Jambi</option>
+    <option value="jawabarat">Jawa Barat</option>
+    <option value="jawatimur">Jawa Timur</option>
+    <option value="jogjakarta">Yogyakarta</option>
+    <option value="kalbar">Kalimantan Barat</option>
+    <option value="kalteng">Kalimantan Tengah</option>
+    <option value="kalimantan">Kalimantan Timur</option>
+    <option value="kalimantanutara">Kalimantan Utara</option>
+    <option value="kepulauanriau">Kepulauan Riau</option>
+    <option value="lampung">Lampung</option>
+    <option value="maluku">Maluku</option>
+    <option value="malut">Maluku Utara</option>
+    <option value="nusa-tenggara-barat">Nusa Tenggara Barat</option>
+    <option value="ntb">Nusa Tenggara Timur</option>
+    <option value="papua">Papua</option>
+    <option value="papuabarat">Papua Barat</option>
+    <option value="riau">Riau</option>
+    <option value="sulawesi-selatan">Sulawesi Selatan</option>
+    <option value="sulawesi-tengah">Sulawesi Tengah</option>
+    <option value="sulawesi-utara">Sulawesi Utara</option>
+    <option value="sumatera-utara">Sumatera Utara</option>
+    <option value="sumatera-selatan">Sumatera Selatan</option>
+    <option value="sumatera-barat">Sumatera Barat</option>
+    <option value="yogyakarta">Yogyakarta</option>
+    <option value="banten">Banten</option>
+    <option value="bangka-belitung">Bangka Belitung</option>
+    <option value="jakarta">DKI Jakarta</option>
+    <option value="kalsel">Kalimantan Selatan</option>
+    <option value="kalimantan">Kalimantan Utara</option>
+
+            </select>
+            <input type="text" id="delivery-kota/kab-input" placeholder="Kota/Kabupaten">
+            <input type="text" id="delivery-kecamatan-input" placeholder="Kecamatan">
+            <input type="text" id="delivery-kode-input" placeholder="Kode Pos">
+            <input type="text" id="delivery-namajl-input" placeholder="Nama Jalan">
+            <input type="text" id="delivery-detail-input" placeholder="Detail Lainnya">
+        </div>
+
+        
+        
+
+
+        <!-- Metode Pembayaran -->
+
+
+
+
+
+
+        
+        
+    
+        <!-- Ringkasan Belanja -->
+        <div class="cart-summary-container">
+            <h3>Ringkasan Belanja</h3>
+            <div id="cart-items-list"></div>
+            <div>Total Pembayaran: Rp <span id="total-amount">0</span></div>
+        </div>
+
+        <!-- Metode Pembayaran -->
+<div class="order-method-container" id="payment-methodbankorewallet-section">
+    <label for="method">Metode Pembayaran:</label>
+    <div class="radio-group">
+        <label class="radio-option">
+            <input type="radio" name="payment-method" id="transfer-bank" checked>
+            <span class="radio-label">Transfer Bank</span>
+        </label>
+        <label class="radio-option">
+            <input type="radio" name="payment-method" id="ewallet">
+            <span class="radio-label">E-Wallet</span>
+        </label>
+    </div>
+    <hr>
+
+    <!-- Pilihan Bank untuk Transfer -->
+    <label for="bank">Pilih Bank untuk Transfer:</label>
+    <div class="radio-group" id="bank-section">
+        <label class="radio-option">
+            <input type="radio" name="bank-transfer" id="bri-bank" value="bank-1">
+            <img src="bri (1).png" alt="BRI" class="bank-logo">
+            <span class="radio-label">BRI</span>
+        </label>
+        <label class="radio-option">
+            <input type="radio" name="bank-transfer" id="bni-bank" value="bank-2">
+            <img src="bni.png" alt="BNI" class="bank-logo">
+            <span class="radio-label">BNI</span>
+        </label>
+        <label class="radio-option">
+            <input type="radio" name="bank-transfer" id="mandiri-bank" value="bank-3">
+            <img src="mandiri.png" alt="Mandiri" class="bank-logo">
+            <span class="radio-label">Mandiri</span>
+        </label>
+        <label class="radio-option">
+            <input type="radio" name="bank-transfer" id="bca-bank" value="bank-4">
+            <img src="bca.png" alt="BCA" class="bank-logo">
+            <span class="radio-label">BCA</span>
+        </label>
+        <label class="radio-option">
+            <input type="radio" name="bank-transfer" id="permata-bank" value="bank-5">
+            <img src="permata.png" alt="Permata" class="bank-logo">
+            <span class="radio-label">Bank Permata</span>
+        </label>
+        <label class="radio-option">
+            <input type="radio" name="bank-transfer" id="bsi-bank" value="bank-6">
+            <img src="bsi.png" alt="BSI" class="bank-logo">
+            <span class="radio-label">BSI</span>
+        </label>
+        <label class="radio-option">
+            <input type="radio" name="bank-transfer" id="cimb-bank" value="bank-7">
+            <img src="cimbniaga.png" alt="CimbNiaga" class="bank-logo">
+            <span class="radio-label">Cimb Niaga</span>
+        </label>
+        <!-- Additional bank options here -->
+    </div>
+
+    <!-- Pilihan E-Wallet -->
+    <div class="radio-group" id="ewallet-section" style="display:none;">
+        <label for="E-Wallet">Pilih E-Wallet:</label>
+        <label class="radio-option">
+            <input type="radio" name="ewallet-transfer" id="gopay-ewallet" value="ewallet-1">
+            <img src="gopay.png" alt="GoPay" class="bank-logo">
+            <span class="radio-label">GoPay</span>
+        </label>
+        <label class="radio-option">
+            <input type="radio" name="ewallet-transfer" id="dana-ewallet" value="ewallet-2">
+            <img src="dana.png" alt="Dana" class="bank-logo">
+            <span class="radio-label">Dana</span>
+        </label>
+        <label class="radio-option">
+            <input type="radio" name="ewallet-transfer" id="ovo-ewallet" value="ewallet-3">
+            <img src="ovo.png" alt="Ovo" class="bank-logo">
+            <span class="radio-label">OVO</span>
+        </label>
+        <label class="radio-option">
+            <input type="radio" name="ewallet-transfer" id="shopee-ewallet" value="ewallet-4">
+            <img src="sopipay.png" alt="ShopeePay" class="bank-logo">
+            <span class="radio-label">ShopeePay</span>
+        </label>
+        <label class="radio-option">
+            <input type="radio" name="ewallet-transfer" id="kredivo-ewallet" value="ewallet-5">
+            <img src="kredivoo.png" alt="Kredivo" class="bank-logo">
+            <span class="radio-label">Kredivo</span>
+        </label>
+        <!-- Additional E-Wallet options here -->
+    </div>
+</div>
+
+        <script>
+            // Ambil data keranjang dari localStorage
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const cartItemContainer = document.getElementById("cart-items-list");
+const totalElement = document.getElementById("total-amount");
+
+// Fungsi untuk memperbarui tampilan keranjang
+function updateCart() {
+    cartItemContainer.innerHTML = ''; // Hapus daftar produk lama
+
+    let total = 0;
+
+    // Menambahkan setiap produk ke dalam keranjang
+    cart.forEach(item => {
+        const cartItem = document.createElement("div");
+        cartItem.classList.add("cart-item");
+
+        // Menampilkan produk dalam keranjang
+        cartItem.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" class="product-image" style="width: 60px; height: 60px;">
+            <div class="product-details">
+                <h2>${item.name}</h2>
+                <p>Harga: Rp ${item.price.toLocaleString()}</p>
+                <p>Jumlah: <span class="quantity">${item.quantity}</span></p>
+            </div>
+            <div class="product-quantity">
+                <button onclick="updateQuantity('${item.name}', -1)">-</button>
+                <span class="quantity">${item.quantity}</span>
+                <button onclick="updateQuantity('${item.name}', 1)">+</button>
+            </div>
+            <div class="product-price">
+                <span>Rp ${item.price * item.quantity}</span>
+            </div>
+            <div>
+                <button onclick="removeItem('${item.name}')">Hapus</button>
+            </div>
+        `;
+
+        // Menambahkan produk ke container
+        cartItemContainer.appendChild(cartItem);
+
+        total += item.price * item.quantity; // Hitung total harga
+    });
+
+    // Menampilkan total harga
+    totalElement.textContent = `Rp ${total.toLocaleString()}`;
+}
+
+// Fungsi untuk memperbarui jumlah produk di keranjang
+function updateQuantity(productName, change) {
+    const product = cart.find(item => item.name === productName);
+    if (product) {
+        product.quantity += change;
+
+        // Jika jumlah produk mencapai 0, hapus produk dari keranjang
+        if (product.quantity < 1) {
+            cart = cart.filter(item => item.name !== productName); // Hapus produk dari array keranjang
+        }
+
+        // Simpan kembali keranjang ke localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCart(); // Perbarui tampilan keranjang
+    }
+}
+
+// Fungsi untuk menghapus produk dari keranjang
+function removeItem(productName) {
+    // Menghapus produk dari array keranjang
+    cart = cart.filter(item => item.name !== productName);
+    
+    // Simpan kembali keranjang ke localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCart(); // Perbarui tampilan keranjang
+}
+
+// Menampilkan produk di keranjang saat halaman dimuat
+updateCart();
+
+// Mendapatkan elemen-elemen yang diperlukan
+const belanjaOnlineRadio = document.getElementById('belanja-online');
+const clickPickupRadio = document.getElementById('click-pickup');
+const pickupInfoSection = document.getElementById('pickup-info-section');
+const pickupRoleSection = document.getElementById('pickup-role-section');
+const informasiAmbilSection = document.getElementById('infomasiambil-info-section');
+const deliveryInfoSection = document.getElementById('delivery-info-section');
+
+// Event listener untuk metode pemesanan (Belanja Online)
+belanjaOnlineRadio.addEventListener('change', function() {
+    if (this.checked) {
+        // Menampilkan informasi pengiriman dan menyembunyikan lainnya
+        deliveryInfoSection.style.display = 'block';
+        pickupInfoSection.style.display = 'none';
+        pickupRoleSection.style.display = 'none';
+        informasiAmbilSection.style.display = 'none';
+    }
+});
+
+// Event listener untuk metode pemesanan (Click & Pickup)
+clickPickupRadio.addEventListener('change', function() {
+    if (this.checked) {
+        // Menampilkan informasi pengambilan dan opsi peran
+        pickupInfoSection.style.display = 'block';
+        pickupRoleSection.style.display = 'block';
+        informasiAmbilSection.style.display = 'block';
+        deliveryInfoSection.style.display = 'none';
+    }
+});
+        </script>
+        
+        <script>
+            // Ambil elemen radio button
+            const transferBankRadio = document.getElementById('transfer-bank');
+            const ewalletRadio = document.getElementById('ewallet');
+        
+            // Ambil elemen section
+            const bankSection = document.getElementById('bank-section');
+            const ewalletSection = document.getElementById('ewallet-section');
+        
+            // Ambil labelnya
+            const bankLabel = document.querySelector('label[for="bank"]');
+        
+            // Fungsi untuk update tampilan
+            function updatePaymentMethod() {
+                if (transferBankRadio.checked) {
+                    bankLabel.style.display = 'block';
+                    bankSection.style.display = 'block';
+                    ewalletSection.style.display = 'none';
+                } else if (ewalletRadio.checked) {
+                    bankLabel.style.display = 'none';
+                    bankSection.style.display = 'none';
+                    ewalletSection.style.display = 'block';
+                }
+            }
+        
+            // Jalankan saat radio button di klik
+            transferBankRadio.addEventListener('change', updatePaymentMethod);
+            ewalletRadio.addEventListener('change', updatePaymentMethod);
+        
+            // Panggil sekali pas halaman pertama kali load
+            updatePaymentMethod();
+        </script>
+        
+
+
+
+        
+        
+    
+        <!-- Checkout Button -->
+        <a href="resi.html">
+            <button id="checkout-process-button">Cetak Struk</button>
+        </a>
+        
+    </div>
+
+    <!-- Tambahkan library jsPDF di halaman -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+
+
+<script>
+    function generateStrukPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    let pageHeight = doc.internal.pageSize.height;
+    let pageWidth = doc.internal.pageSize.width;
+
+    // ====== HEADER WARNA (SAMA KAYAK FOOTER) ======
+    let headerHeightPx = 20;
+    doc.setFillColor(50, 50, 50); // abu gelap
+    doc.rect(0, 0, pageWidth, headerHeightPx, 'F');
+
+    // Simulasi tinggi total struk manual
+    let totalContentHeight = 100;
+    let y = (pageHeight - totalContentHeight) / 2;
+
+    // X start biar rata kiri tapi di tengah halaman
+    let xStart = (pageWidth - 80) / 2; // 80 adalah lebar blok struk
+
+    // Ambil data pelanggan
+    let namaPelanggan = document.getElementById("delivery-name-input")?.value || 
+                        document.getElementById("delivery-namalengkap-input")?.value || "Tidak Diisi";
+
+    let noTelp = document.getElementById("delivery-nmr-input")?.value || 
+                 document.getElementById("delivery-nmrtelpon-input")?.value || "Tidak Diisi";
+
+    let metodePemesanan = belanjaOnlineRadio.checked ? "Belanja Online" : "Click & Pickup";
+    let metodePembayaran = document.getElementById("transfer-bank").checked ? "Transfer Bank" : "E-Wallet";
+
+    let metodeDetail = "";
+    if (metodePembayaran === "Transfer Bank") {
+        let selectedBank = document.querySelector('input[name="bank-transfer"]:checked');
+        metodeDetail = selectedBank ? selectedBank.nextElementSibling.alt : "Tidak Dipilih";
+    } else {
+        let selectedEwallet = document.querySelector('input[name="ewallet-transfer"]:checked');
+        metodeDetail = selectedEwallet ? selectedEwallet.nextElementSibling.alt : "Tidak Dipilih";
+    }
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let total = 0;
+
+    // Waktu
+    let now = new Date();
+    let waktuStr = now.toLocaleString();
+    let kodeUnik = now.getFullYear().toString() +
+                   (now.getMonth() + 1).toString().padStart(2, "0") +
+                   now.getDate().toString().padStart(2, "0") +
+                   now.getHours().toString().padStart(2, "0") +
+                   now.getMinutes().toString().padStart(2, "0") +
+                   now.getSeconds().toString().padStart(2, "0");
+
+    // ====== STRUK HEADER ======
+    doc.setFontSize(16);
+    doc.text("PT.Gawai Nusantara", xStart, y); y += 10;
+
+    doc.setFontSize(12);
+    let lines = [
+        `Nama: ${namaPelanggan}`,
+        `No Telp: ${noTelp}`,
+        `Metode Pemesanan: ${metodePemesanan}`,
+        `Metode Pembayaran: ${metodePembayaran} (${metodeDetail})`,
+        `Waktu: ${waktuStr}`,
+        "--------------------------------"
+    ];
+
+    lines.forEach(line => {
+        doc.text(line, xStart, y);
+        y += 7;
+    });
+
+    // ====== PRODUK ======
+    cart.forEach(item => {
+        let line = `${item.name} (x${item.quantity}) - Rp ${item.price * item.quantity}`;
+        doc.text(line, xStart, y);
+        y += 7;
+        total += item.price * item.quantity;
+    });
+
+    doc.text("--------------------------------", xStart, y); y += 7;
+
+    doc.setFontSize(14);
+    doc.text(`Total: Rp ${total.toLocaleString()}`, xStart, y); y += 10;
+
+    // ====== BARCODE ======
+    let canvas = document.createElement("canvas");
+    JsBarcode(canvas, kodeUnik, { format: "CODE128", width: 2, height: 40 });
+    let imgData = canvas.toDataURL("image/png");
+
+    let barcodeWidth = 100;
+    doc.addImage(imgData, "PNG", (pageWidth - barcodeWidth) / 2, y, barcodeWidth, 30);
+
+    y += 35;
+
+    // ====== FOOTER ======
+    let footerHeightPx = 20;
+    doc.setFillColor(50, 50, 50);
+    doc.rect(0, pageHeight - footerHeightPx, pageWidth, footerHeightPx, 'F');
+
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(11);
+    let footerText1 = "Terima kasih telah berbelanja di Gawai Nusantara!";
+    let footer1Width = doc.getTextWidth(footerText1);
+    doc.text(footerText1, (pageWidth - footer1Width) / 2, pageHeight - footerHeightPx + 7);
+
+    doc.setFontSize(9);
+    let footerText2 = "IG: @gawainusantara | WA: 0812-3456-7890 | www.gawainusantara.com";
+    let footer2Width = doc.getTextWidth(footerText2);
+    doc.text(footerText2, (pageWidth - footer2Width) / 2, pageHeight - footerHeightPx + 14);
+
+    doc.setTextColor(0, 0, 0);
+
+    doc.save("Struk_GawaiNusantara.pdf");
+}
+
+
+    // Event listener saat tombol checkout diklik
+    document.getElementById("checkout-process-button").addEventListener("click", function (e) {
+        e.preventDefault(); // Biar tidak pindah halaman resi.html
+        generateStrukPDF();
+    });
+</script>
+
+

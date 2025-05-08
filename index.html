@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gawai Nusantara</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Icon-->
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <style>
+      body{
+        font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .btn-selengkapnya22 {
+  display: inline-block;
+  padding: 4px 20px;
+  margin-top: 2px;
+  background-color: #007aff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+.btn-selengkapnya22:hover {
+  background-color: #005bb5;
+}
+.btn-selengkapnya12 {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007aff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-selengkapnya12:hover {
+  background-color: #005bb5;
+}
+.content {
+  width: 60%;
+}
+
+.testimonial-container {
+  width: 97%;
+  background-color: rgba(246, 246, 246, 0.7);
+  padding: 15px;
+  margin-top: 2%;
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-bottom: 4%;
+  border-radius: 20px;
+  backdrop-filter: blur(20px); /* Efek blur */
+  z-index:9999;
+}
+
+.testimonial-chat {
+  margin-top: 6px;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.testimonial-input {
+  margin-top: 15px;
+}
+
+.testimonial-input textarea,
+.testimonial-input input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.name-input {
+  margin-bottom: 10px;
+}
+
+.testimonial-input button {
+  background-color: #0b85ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.testimonial-input button:hover {
+  background-color: #2e97ff;
+}
+
+#chat-box-container {
+  margin-top: 15px;
+}
+
+.chat-box {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  flex-direction: column;
+  opacity: 0; /* Set awal menjadi transparan, agar animasi berlaku */
+  animation: slideUp 0.5s ease-out forwards;
+  animation-delay: 0s; /* Delay default */
+}
+/* Animasi untuk elemen testimoni yang muncul dari bawah */
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px); /* Mulai dari posisi lebih bawah */
+    opacity: 0; /* Mulai dengan transparan */
+  }
+  100% {
+    transform: translateY(0); /* Berakhir di posisi semula */
+    opacity: 1; /* Akhirnya terlihat jelas */
+  }
+}
+
+.chat-box .name {
+  font-weight: bold;
+  font-size: 12px;
+  width: 40%;
+  margin-bottom: 1.2%;
+  
+}
+
+.chat-box .message {
+  width: 100%;
+  
+}
+
+.cta {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  z-index: 999999;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.cta:hover {
+  background-color: #c0392b;
+}
+#clear-testimonials {
+  background-color: #e74c3c;
+}
+
+#clear-testimonials:hover {
+  background-color: #c0392b;
+  
+}
+#chat-box-container {
+  margin-top: 15px;
+  max-height: 250px; /* Menetapkan tinggi maksimal kotak chat */
+  overflow-y: auto;  /* Menambahkan scrollbar jika konten melebihi tinggi maksimal */
+  flex-direction: column;
+  
+}
+.tekkarea{
+  font-family: 'Poppins', sans-serif;
+}
+.testimonial-chat h3{
+  text-align: center;
+  padding: 5px 5px;
+}
+/* Container khusus untuk animasi bintang, menggantikan body */
+.star-animation-container {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: rgb(0, 0, 0);
+            position: relative;
+            margin-top: 25%;
+            margin-bottom: 30%;
+        }
+
+        /* Menambahkan gambar latar belakang dengan clip-path, mengganti body::before */
+        .star-animation-bg {
+            content: "";
+            position: absolute;
+            top: 82%;
+            left: 50%;
+            margin-left: 5%;
+            margin-right: 5%;
+            padding-right: 20%;
+            width: 1328px;  /* Sesuaikan dengan ukuran layar iPad */
+            height: 957px;
+            background-image: url('Group 3 (1).png'); /* Path ke gambar */
+            background-size: contain; /* Menyesuaikan gambar dengan ukuran layar */
+            background-position: center; /* Menempatkan gambar di tengah */
+            background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+            z-index: -1; /* Memastikan gambar berada di belakang konten */
+            transform: translate(-50%, -50%); /* Menempatkan gambar di tengah */
+            clip-path: inset(5% round 15px); /* Membatasi area dengan bentuk layar iPad */
+            margin: 0%;
+            
+        }
+
+        /* Canvas untuk bintang */
+        .star-animation-canvas {
+            display: block;
+            position: absolute;
+            top: 50%; /* Posisikan di tengah layar */
+            left: 50%; /* Posisikan di tengah layar */
+            transform: translate(-50%, -50%);
+            width: 957px;  /* Sesuaikan dengan ukuran layar iPad */
+            height: 655px;  /* Sesuaikan dengan ukuran layar iPad */
+            z-index: 0; /* Canvas berada di bawah kontrol */
+            margin-bottom: 120%;
+        }
+
+        /* Kontrol UI */
+        .star-animation-controls {
+            margin-top: 2%;
+            display: flex;
+            gap: 15px;
+            justify-content: center; 
+            z-index: 1; /* Agar tombol kontrol tetap berada di atas canvas */
+            margin-bottom: 5%;
+        }
+
+        .star-animation-button {
+            padding: 8px 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .star-animation-button:hover {
+            background-color: #2980b9;
+        }
+
+        .star-animation-slider-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .star-animation-slider {
+            width: 100px;
+        }
+
+        .star-animation-label {
+            font-size: 14px;
+        }
+        
+        .star-animation-heading {
+            margin: 10px;
+            text-align: center;
+        }
+        
+        .star-animation-subheading {
+            
+            text-align: center;
+        }
+    </style>
+    <!--Navbar start-->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Gawai <span>Nusantara</span> </a>
+      <div class="navbar-nav">
+        <a href="#home"><img src="Apple_logo_white.svg.png" style="width: 15px;" height="auto" class="apple_icon"></a>
+        <a href="mac.html">Mac</a>
+        <a href="ipad.html">iPad</a>
+        <a href="iphone.html">iPhone</a>
+        <a href="watch.html">Watch</a>
+        <a href="airpods.html">Airpods</a>
+        <a href="tentangkami.html">Tentang Kami</a>
+        <a href="kontakkami.html">Kontak Kami</a>
+        <a href="register.html">Masuk/Daftar</a>
+      </div>
+      <div class="navbar-extra">
+        <div class="navbar-extra">
+          
+          <a href="checkout.html" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
+          <a href="#" id="menu"><i data-feather="menu"></i></a>
+        </div>
+      </div>
+      <!-- Search -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box"><i data-feather="search"></i></label>
+       </div>
+      </div>
+    </nav>
+    <!--Navbar end-->
+
+
+    <!--Hero section-->
+
+    <section class="hero" id="home">
+      <main class="content">
+        <img src="logo.PNG" style="width: 95px; height: auto;" class="logo">
+        <h1>Dapatkan produk <br>Apple impian Anda di <br>Toko Gawai <span>Nusantara</span></h1>
+        <p>Temukan Produk Apple Terbaru di Gawai Nusantara!</p>
+        <a href="#kategori" class="ctaaaa">Beli Sekarang</a>
+      </main>
+    </section>
+
+    <div class="testimonial-container">
+      <div class="testimonial-chat">
+        <h3>Testimoni Pelanggan</h3>
+        <div id="chat-box-container" class="chatboxcontainer">
+          <!-- Testimoni pelanggan akan ditampilkan di sini -->
+        </div>
+        <div class="testimonial-input">
+          <input type="text" id="customer-name" placeholder="@username" class="name-input">
+          <textarea id="testimonial-input" placeholder="Tulis testimoni Anda..." rows="4"></textarea class="name-input">
+          <button id="submit-testimonial" class="butttonnnn">Kirim Testimoni</button>
+          <button id="clear-testimonials" class="butttonnnn">Hapus Semua Testimoni</button> <!-- Tombol untuk hapus semua testimoni -->
+        </div>
+      </div>
+    </div>
+    
+    
+
+    <!-- Produk Apple Section -->
+<section class="produk-apple" id="kategori">
+  <h2>Berbagai produk Apple.</h2>
+  <br>
+  <div class="produk-container">
+    <a href="mac.html" class="appleitem">
+      <img src="mac.png" alt="mac">
+      <p class="produk-nama">Mac</p>
+      <p class="produk-harga">Mulai Rp8 juta</p>
+    </a>
+    <a href="iphone.html" class="appleitem">
+      <img src="ipon.png" alt="iPhone">
+      <p class="produk-nama">iPhone</p>
+      <p class="produk-harga">Mulai Rp8 juta</p>
+    </a>
+    <a href="ipad.html" class="appleitem">
+      <img src="ipad.png" alt="iPad">
+      <p class="produk-nama">iPad</p>
+      <p class="produk-harga">Mulai Rp4 juta</p>
+    </a>
+    <a href="watch.html" class="appleitem">
+      <img src="waacth.png" alt="Watch">
+      <p class="produk-nama">WATCH</p>
+      <p class="produk-harga">Mulai Rp3 juta</p>
+    </a>
+    <a href="airpods.html" class="appleitem">
+      <img src="erpods.png" alt="AirPods">
+      <p class="produk-nama">Music</p>
+      <p class="produk-harga">Mulai Rp1 juta</p>
+    </a>
+  </div>
+</section>
+
+    
+    <div class="aipon">
+      <a href="iphone.html">
+        <button class="btn-selengkapnya123">Selengkapnya</button>
+      </a>
+      <img src="Frame 2 (6).png" alt="iPhone 16">
+    </div>
+
+    <div class="video-container">
+      <video autoplay muted loop controls>
+          <source src="IMG_5591.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+  </div>
+
+  <div class="video-container">
+    <video autoplay muted loop controls>
+        <source src="IMG_5599 (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<div class="aipon">
+  <img src="kakak (1).png" alt="iPhone 16">
+</div>
+
+  <div class="product-container2">
+    <div class="product12">
+      <button class="btn-selengkapnya12">Selengkapnya</button>
+        <img src="Frame 8.png" alt="MacBook Air">
+    </div>
+
+    <div class="product12">
+      <a href="ipad.html">
+          <button class="btn-selengkapnya22">Selengkapnya</button>
+      </a>
+      <img src="Frame 9 (3).png" alt="iPad Pro">
+    </div>
+  </div>
+
+<br><br><br>
+
+<h1 class="star-animation-heading">Ringan, Tipis, Kencang.</h1>
+  <h2 class="star-animation-subheading">Coba fitur di bawah ini.</h2>
+
+  <div class="star-animation-controls">
+    <div class="star-animation-slider-container">
+        <label class="star-animation-label" for="starAnimationCount">Jumlah Bintang:</label>
+        <input type="range" id="starAnimationCount" class="star-animation-slider" min="50" max="500" value="150">
+        <span id="starAnimationCountValue">150</span>
+    </div>
+    
+    <div class="star-animation-slider-container">
+        <label class="star-animation-label" for="starAnimationSpeed">Kecepatan:</label>
+        <input type="range" id="starAnimationSpeed" class="star-animation-slider" min="1" max="10" value="3">
+        <span id="starAnimationSpeedValue">3</span>
+    </div>
+    
+    <button id="toggleStarAnimationColors" class="star-animation-button">Ubah Warna</button>
+</div>
+<!-- Container utama untuk animasi bintang -->
+<div class="star-animation-container">
+  
+  
+  <!-- Elemen latar belakang -->
+  <div class="star-animation-bg"></div>
+  
+  <!-- Canvas untuk animasi bintang -->
+  <canvas id="starAnimationCanvas" class="star-animation-canvas"></canvas>
+</div>
+
+     
+
+
+    <!--Hero section end-->
+    
+    <!--Menu section start-->
+   
+    
+    
+    
+  
+
+
+
+    <!--Menu section end-->
+
+
+    
+
+    <footer class="footer">
+      <div class="footer-left">
+        <p><span>🕒</span> Jam 09:00 - 18:00</p>
+        <p><span>📧</span> Email : <a href="mailto:customercare@erajaya.com">customercare@erajaya.com</a></p>
+        <p><span>📞</span> Contact Center : <a href="tel:1500372">1500372</a></p>
+        <p><span>📱</span> WhatsApp : <a href="https://wa.me/6281290777722">0812 9077 7722</a></p>
+
+        <br>
+        <br><br><br> <br>
+  
+        <div class="pengaduan">
+          <h3>Layanan Pengaduan Konsumen</h3>
+          <p>Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga<br>
+          Kementerian Perdagangan Republik Indonesia</p>
+          <p>WhatsApp Ditjen PKTN:<br><strong>0853-1111-1010</strong></p>
+        </div>
+      </div>
+  
+      <div class="footer-right">
+        <div class="sosmed-icons">
+          <span><img src="logoicon (1).png" alt=""></span><span><img src="logoicon (2).png" alt=""></span><span><img src="logoicon (3).png" alt=""></span><span><img src="logoicon (4).png" alt=""></span><span><img src="logoicon (5).png" alt=""></span><span><img src="logoicon (6).png" alt=""></span>
+        </div>
+  
+        <h3>Metode Pembayaran</h3>
+        <div class="payments">
+          <img src="payment-footer-maret-2025.webp" alt="Metode Pembayaran">
+          <br>
+        </div>
+  
+        <h3>Jasa Pengiriman</h3>
+        <div class="shipping">
+          <img src="shipping (1).webp" alt="Jasa Pengiriman">
+        </div>
+      </div>
+    </footer>
+
+    <!--Feather icon-->
+    <script>
+      feather.replace();
+    </script>
+    <script>
+      let lastScrollTop = 0; // Variabel untuk menyimpan posisi scroll sebelumnya
+
+window.addEventListener("scroll", function() {
+    let navbar = document.querySelector(".navbar");
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Jika scroll ke bawah, sembunyikan navbar
+    if (currentScroll > lastScrollTop) {
+        navbar.style.top = "-100px";  // Atur angka ini sesuai tinggi navbar kamu
+    } else {
+        navbar.style.top = "0";  // Tampilkan navbar saat scroll ke atas
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Menghindari nilai negatif
+});
+
+// Fungsi untuk menyimpan testimoni ke localStorage
+// Fungsi untuk menyimpan testimoni ke localStorage
+function saveTestimonialToLocalStorage(name, message) {
+  let testimonials = localStorage.getItem('testimonials');
+  testimonials = testimonials ? JSON.parse(testimonials) : [];
+
+  // Tambahkan testimoni baru ke dalam array
+  testimonials.push({ name, message });
+
+  // Simpan kembali ke localStorage
+  localStorage.setItem('testimonials', JSON.stringify(testimonials));
+}
+
+// Fungsi untuk memuat testimoni dari localStorage dengan animasi
+function loadTestimonialsFromLocalStorage() {
+  let testimonials = localStorage.getItem('testimonials');
+  testimonials = testimonials ? JSON.parse(testimonials) : [];
+
+  // Tampilkan testimoni di halaman
+  const chatBoxContainer = document.getElementById('chat-box-container');
+  chatBoxContainer.innerHTML = ''; // Bersihkan konten yang ada
+
+  testimonials.forEach((testimonial, index) => {
+    const newTestimonial = document.createElement('div');
+    newTestimonial.classList.add('chat-box');
+
+    const nameColumn = document.createElement('div');
+    nameColumn.classList.add('name');
+    nameColumn.textContent = testimonial.name;
+
+    const messageColumn = document.createElement('div');
+    messageColumn.classList.add('message');
+    messageColumn.textContent = testimonial.message;
+
+    newTestimonial.appendChild(nameColumn);
+    newTestimonial.appendChild(messageColumn);
+
+    // Menambahkan animasi hanya setelah elemen ditambahkan
+    chatBoxContainer.appendChild(newTestimonial);
+
+    // Menambahkan animasi dengan delay berdasarkan urutan testimoni
+    newTestimonial.style.animationDelay = `${index * 0.2}s`;
+  });
+}
+
+// Fungsi untuk memuat testimoni dari localStorage dengan animasi
+function loadTestimonialsFromLocalStorage() {
+  let testimonials = localStorage.getItem('testimonials');
+  testimonials = testimonials ? JSON.parse(testimonials) : [];
+
+  // Tampilkan testimoni di halaman
+  const chatBoxContainer = document.getElementById('chat-box-container');
+  chatBoxContainer.innerHTML = ''; // Bersihkan konten yang ada
+
+  testimonials.forEach((testimonial, index) => {
+    const newTestimonial = document.createElement('div');
+    newTestimonial.classList.add('chat-box');
+
+    const nameColumn = document.createElement('div');
+    nameColumn.classList.add('name');
+    nameColumn.textContent = testimonial.name;
+
+    const messageColumn = document.createElement('div');
+    messageColumn.classList.add('message');
+    messageColumn.textContent = testimonial.message;
+
+    newTestimonial.appendChild(nameColumn);
+    newTestimonial.appendChild(messageColumn);
+
+    // Menambahkan elemen testimoni ke kontainer
+    chatBoxContainer.appendChild(newTestimonial);
+
+    // Menambahkan animasi dengan delay berdasarkan urutan testimoni
+    newTestimonial.style.animationDelay = `${index * 0.5}s`;  // Penundaan animasi agar tampil satu per satu
+  });
+}
+
+// Fungsi untuk menyimpan testimoni ke localStorage
+function saveTestimonialToLocalStorage(name, message) {
+  let testimonials = localStorage.getItem('testimonials');
+  testimonials = testimonials ? JSON.parse(testimonials) : [];
+
+  testimonials.push({ name, message });
+  localStorage.setItem('testimonials', JSON.stringify(testimonials));
+}
+
+// Muat testimoni dari localStorage saat halaman pertama kali dimuat
+window.onload = loadTestimonialsFromLocalStorage;  // Memastikan testimoni dimuat saat halaman pertama kali dimuat
+
+// Event listener untuk mengirim testimoni
+document.getElementById('submit-testimonial').addEventListener('click', function() {
+  const customerName = document.getElementById('customer-name').value;
+  const testimonialText = document.getElementById('testimonial-input').value;
+
+  if (customerName.trim() !== "" && testimonialText.trim() !== "") {
+    // Simpan testimoni ke localStorage
+    saveTestimonialToLocalStorage(customerName, testimonialText);
+
+    // Muat ulang semua testimoni dari localStorage
+    loadTestimonialsFromLocalStorage();
+
+    // Bersihkan input setelah kirim
+    document.getElementById('customer-name').value = "";
+    document.getElementById('testimonial-input').value = "";
+  } else {
+    alert("Tolong isi nama dan testimoni terlebih dahulu.");
+  }
+});
+
+// Event listener untuk menghapus semua testimoni
+document.getElementById('clear-testimonials').addEventListener('click', function() {
+  // Menghapus semua testimoni di localStorage
+  localStorage.removeItem('testimonials');
+
+  // Bersihkan tampilan testimoni
+  document.getElementById('chat-box-container').innerHTML = '';
+
+  alert("Semua testimoni telah dihapus.");
+});
+
+// Muat testimoni dari localStorage saat halaman pertama kali dimuat
+window.onload = loadTestimonialsFromLocalStorage;
+
+  document.addEventListener("DOMContentLoaded", function () {
+  // ============ Toggle Navbar =============
+  const navbarNav = document.querySelector('.navbar-nav');
+  const menu = document.querySelector('#menu');
+
+  // Pastikan elemen menu ada di halaman
+  if (menu) {
+    menu.onclick = () => {
+      navbarNav.classList.toggle('active'); // Toggle navbar
+    };
+  }
+
+  // Event listener untuk klik di luar menu dan navbarNav
+  document.addEventListener('click', function (e) {
+    // Periksa jika klik terjadi di luar menu dan navbarNav
+    if (!menu.contains(e.target) && !navbarNav.contains(e.target)) {
+      navbarNav.classList.remove('active'); // Hapus class active
+    }
+  });
+});
+      // Mengatur canvas
+      const canvas = document.getElementById('starAnimationCanvas');
+      const ctx = canvas.getContext('2d');
+      
+      // Mengatur ukuran canvas sesuai ukuran jendela
+      canvas.width = 1328;
+      canvas.height = 957;
+      
+      // Array untuk menyimpan semua bintang
+      let stars = [];
+      
+      // Opsi warna bintang
+      const colorSets = [
+          ['#ffffff', '#fffacd', '#87cefa', '#e6e6fa'], // Putih, kuning pucat, biru langit, lavender
+          ['#ff6b6b', '#feca57', '#1dd1a1', '#5f27cd'], // Merah, kuning, hijau, ungu
+          ['#00a8ff', '#9c88ff', '#fbc531', '#4cd137'], // Biru, ungu, kuning, hijau
+          ['#ffcccc', '#ccffcc', '#ccccff', '#ffffcc']  // Merah muda, hijau muda, biru muda, kuning muda
+      ];
+      
+      let currentColorSet = 0;
+      let starCount = 150;
+      let starSpeed = 3;
+      
+      // Kelas untuk representasi bintang
+      class Star {
+          constructor() {
+              this.reset();
+              // Penempatan acak di layar saat inisialisasi
+              this.x = Math.random() * canvas.width;
+              this.y = Math.random() * canvas.height;
+          }
+          
+          reset() {
+              // Ukuran bintang (0.5 - 3)
+              this.size = Math.random() * 2.5 + 0.5;
+              
+              // Kecepatan dan arah acak
+              this.speedX = (Math.random() - 0.5) * starSpeed;
+              this.speedY = (Math.random() - 0.5) * starSpeed;
+              
+              // Kedipan bintang
+              this.opacity = Math.random();
+              this.opacityChange = Math.random() * 0.02;
+              
+              // Warna bintang
+              this.color = colorSets[currentColorSet][Math.floor(Math.random() * colorSets[currentColorSet].length)];
+          }
+          
+          update() {
+              // Pergerakan bintang
+              this.x += this.speedX;
+              this.y += this.speedY;
+              
+              // Kedipan bintang (animasi opacity)
+              this.opacity += this.opacityChange;
+              if (this.opacity > 1 || this.opacity < 0.3) {
+                  this.opacityChange = -this.opacityChange;
+              }
+              
+              // Perubahan arah acak sesekali
+              if (Math.random() < 0.005) {
+                  this.speedX = (Math.random() - 0.5) * starSpeed;
+                  this.speedY = (Math.random() - 0.5) * starSpeed;
+              }
+              
+              // Memantul ketika mencapai tepi
+              if (this.x < 0 || this.x > canvas.width) {
+                  this.speedX = -this.speedX;
+              }
+              if (this.y < 0 || this.y > canvas.height) {
+                  this.speedY = -this.speedY;
+              }
+          }
+          
+          draw() {
+              ctx.fillStyle = this.color;
+              ctx.globalAlpha = this.opacity;
+              
+              // Menggambar bintang (berbentuk lingkaran)
+              ctx.beginPath();
+              ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+              ctx.fill();
+              
+              // Menambahkan efek cahaya
+              ctx.globalAlpha = this.opacity * 0.3;
+              ctx.beginPath();
+              ctx.arc(this.x, this.y, this.size * 2, 0, Math.PI * 2);
+              ctx.fill();
+              
+              ctx.globalAlpha = 1;
+          }
+      }
+      
+      // Membuat bintang-bintang
+      function createStars() {
+          stars = [];
+          for (let i = 0; i < starCount; i++) {
+              stars.push(new Star());
+          }
+      }
+      
+      // Fungsi animasi
+      function animate() {
+          // Membersihkan canvas
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          
+          // Memperbarui dan menggambar setiap bintang
+          stars.forEach(star => {
+              star.update();
+              star.draw();
+          });
+          
+          // Melanjutkan animasi
+          requestAnimationFrame(animate);
+      }
+      
+      // Handler untuk perubahan ukuran jendela
+      window.addEventListener('resize', () => {
+          // Mempertahankan ukuran tetap
+          canvas.width = 1328; // Lebar 1328px
+          canvas.height = 957; // Tinggi 957px
+          createStars();
+      });
+      
+      // Kontrol UI
+      const starCountSlider = document.getElementById('starAnimationCount');
+      const starCountValue = document.getElementById('starAnimationCountValue');
+      starCountSlider.addEventListener('input', () => {
+          starCount = parseInt(starCountSlider.value);
+          starCountValue.textContent = starCount;
+          createStars();
+      });
+      
+      const starSpeedSlider = document.getElementById('starAnimationSpeed');
+      const starSpeedValue = document.getElementById('starAnimationSpeedValue');
+      starSpeedSlider.addEventListener('input', () => {
+          starSpeed = parseInt(starSpeedSlider.value);
+          starSpeedValue.textContent = starSpeed;
+          stars.forEach(star => {
+              // Pertahankan arah tetapi ubah kecepatan
+              const dirX = star.speedX > 0 ? 1 : -1;
+              const dirY = star.speedY > 0 ? 1 : -1;
+              star.speedX = dirX * (Math.random() * starSpeed * 0.5 + starSpeed * 0.5);
+              star.speedY = dirY * (Math.random() * starSpeed * 0.5 + starSpeed * 0.5);
+          });
+      });
+      
+      const toggleColorsBtn = document.getElementById('toggleStarAnimationColors');
+      toggleColorsBtn.addEventListener('click', () => {
+          currentColorSet = (currentColorSet + 1) % colorSets.length;
+          stars.forEach(star => {
+              star.color = colorSets[currentColorSet][Math.floor(Math.random() * colorSets[currentColorSet].length)];
+          });
+      });
+      
+      // Fungsi untuk memulai animasi
+      function initStarAnimation() {
+          createStars();
+          animate();
+      }
+      
+      // Memulai animasi
+      initStarAnimation();
+  </script>
+  </body>
+</html>

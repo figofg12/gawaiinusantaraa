@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gawai Nusantara</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Icon-->
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <!--Navbar start-->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Gawai <span>Nusantara</span> </a>
+      <div class="navbar-nav">
+        <a href="index.html"><img src="Apple_logo_white.svg.png" style="width: 15px;" height="auto" class="apple_icon"></a>
+        <a href="tentangkami.html">Tentang Kami</a>
+        <a href="tentangkami.html">Kontak Kami</a>
+        <a href="register.html">Masuk/Daftar</a>
+      </div>
+      <div class="navbar-extra">
+        <div class="navbar-extra">
+          <a href="#" id="search-button"><i data-feather="search"></i></a>
+          <a href="checkout.html" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
+          <a href="#" id="menu"><i data-feather="menu"></i></a>
+        </div>
+      </div>
+        
+      </div>
+    </nav>
+    <!--Navbar end-->
+
+        <!-- About section start -->
+<section id="about" class="about">
+    <h2><span>Tentang</span> Kami</h2> <br>
+    <div class="row">
+        <h3>Kenapa memilih kami?</h3>
+        <p>Selamat datang di Gawai Nusantara, destinasi terbaik untuk kebutuhan elektronik dan teknologi di Indonesia! Kami hadir dengan misi untuk menyediakan produk gawai berkualitas tinggi dengan harga terbaik, serta layanan yang terpercaya dan profesional.</p>
+
+        <p>Di Gawai Nusantara, kami memahami bahwa teknologi adalah bagian penting dalam kehidupan modern. Oleh karena itu, kami menawarkan berbagai produk, mulai dari smartphone, laptop, aksesori, hingga perangkat pintar lainnya, yang dapat menunjang aktivitas sehari-hari Anda.</p> <br> <br>
+
+        <h4>Mengapa Memilih Kami?</h4> <br>
+        <ul>
+            <li>✅ <b>Produk Terjamin</b> – Hanya menjual barang elektronik asli dan bergaransi.</li>
+            <li>✅ <b>Harga Kompetitif</b> – Penawaran terbaik untuk berbagai kategori produk.</li>
+            <li>✅ <b>Layanan Terpercaya</b> – Pengiriman cepat dan customer service responsif.</li>
+            <li>✅ <b>Dukungan Teknologi & Budaya</b> – Membawa inovasi digital dengan sentuhan khas Nusantara.</li>
+        </ul>
+        <br>
+        <p>Kami berkomitmen untuk menjadi bagian dari perkembangan teknologi di Indonesia, menghubungkan inovasi modern dengan semangat Nusantara.</p>
+    </div>
+    <div class="content">
+        
+    </div>
+</section>
+<!-- About section end -->
+
+
+<script>
+  feather.replace();
+</script>
+<script src="script.js">
+  document.addEventListener("DOMContentLoaded", function () {
+// Ambil semua elemen dengan class .menu-card-img dan .menu-card-img1
+const cards = document.querySelectorAll(".menu-card-img, .menu-card-img1");
+
+// Loop untuk menambahkan event listener pada setiap elemen
+cards.forEach(card => {
+    card.addEventListener("click", function () {
+        const targetURL = card.getAttribute("data-url"); // Ambil URL dari atribut data-url
+        if (targetURL) {
+            window.location.href = targetURL; // Arahkan ke halaman yang sesuai
+        }
+    });
+});
+});
+
+window.addEventListener("scroll", function() {
+    let navbar = document.querySelector(".navbar");
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Jika scroll ke bawah, sembunyikan navbar
+    if (currentScroll > lastScrollTop) {
+        navbar.style.top = "-100px";  // Atur angka ini sesuai tinggi navbar kamu
+    } else {
+        navbar.style.top = "0";  // Tampilkan navbar saat scroll ke atas
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Menghindari nilai negatif
+});
+</script>
+
+</body>
+</html>

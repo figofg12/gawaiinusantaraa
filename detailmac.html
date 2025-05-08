@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MacBook Air M3 15.3 inci (2024)</title>
+ 
+</head>
+<body>
+    <style>
+        body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.product-detail {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-img {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.product-price span {
+  display: block;
+}
+
+.product-discount {
+  font-size: 1rem;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.product-description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #007aff;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+    </style>
+  <div class="product-detail">
+    <img id="product-img" src="" alt="MacBook Air M3 15.3 inci" class="product-img">
+    <h1 id="product-name"></h1>
+    <p class="product-price">
+      <span id="product-old-price"></span>
+      <span id="product-new-price"></span>
+    </p>
+    <p class="product-discount">Diskon: <span id="product-discount"></span>%</p>
+    <p class="product-description">
+      <strong>Spesifikasi:</strong><br>
+      <span id="product-specs"></span>
+    </p>
+    <button id="add-to-cart-btn">Beli Sekarang</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const productData = {
+    name: "MacBook Air M3 15.3 inci (2024)",
+    imageUrl: "macbook-air-m3-15-3.jpg", // Ganti dengan path gambar yang sesuai
+    oldPrice: "Rp 29.499.000",
+    newPrice: "Rp 26.975.000",
+    discount: 9,
+    specs: `
+      <ul>
+        <li>Chip M3 8-core CPU, 10-core GPU</li>
+        <li>16GB Unified Memory</li>
+        <li>512GB SSD Storage</li>
+        <li>15.3-inch Liquid Retina display</li>
+        <li>1080p FaceTime HD camera</li>
+        <li>MagSafe 3 charging port</li>
+        <li>Two Thunderbolt / USB 4 ports</li>
+        <li>Support for up to two external displays</li>
+        <li>35W Dual USB-C Port Compact Power Adapter</li>
+      </ul>
+    `
+  };
+
+  document.getElementById("product-img").src = productData.imageUrl;
+  document.getElementById("product-img").alt = productData.name;
+  document.getElementById("product-name").textContent = productData.name;
+  document.getElementById("product-old-price").textContent = productData.oldPrice;
+  document.getElementById("product-new-price").textContent = productData.newPrice;
+  document.getElementById("product-discount").textContent = productData.discount;
+  document.getElementById("product-specs").innerHTML = productData.specs;
+
+  document.getElementById("add-to-cart-btn").addEventListener("click", () => {
+    alert(`${productData.name} telah ditambahkan ke keranjang!`);
+  });
+});
+
+  </script>
+</body>
+</html>

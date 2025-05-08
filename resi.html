@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Gawai <span>Nusantara</span> </a>
+        <div class="navbar-nav">
+          <a href="index.html"><img src="Apple_logo_white.svg.png" style="width: 15px;" height="auto" class="apple_icon"></a>
+          <a href="mac.html">Tentang Kami</a>
+          <a href="tentangkami.html">Kontak Kami</a>
+          <a href="register.html">Masuk/Daftar</a>
+        </div>
+        <div class="navbar-extra">
+          <div class="navbar-extra">
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            
+            <a href="#" id="menu"><i data-feather="menu"></i></a>
+          </div>
+        </div>
+        
+        </div>
+      </nav>
+
+    
+
+    <script>
+        feather.replace();
+    </script>
+  
+      <!--Js-->
+      <script>
+        window.addEventListener('scroll', function () {
+          var image = document.querySelector('.stacked-image');
+          var imagePosition = image.getBoundingClientRect().top;
+          var windowHeight = window.innerHeight;
+    
+          if (imagePosition < windowHeight * 0.8) { // Mulai muncul saat 80% gambar terlihat
+            image.classList.add('visible');
+          } else {
+            image.classList.remove('visible');
+          }
+        });
+  
+        let lastScrollTop = 0; // Variabel untuk menyimpan posisi scroll sebelumnya
+  
+  window.addEventListener("scroll", function() {
+      let navbar = document.querySelector(".navbar");
+      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  
+      // Jika scroll ke bawah, sembunyikan navbar
+      if (currentScroll > lastScrollTop) {
+          navbar.style.top = "-100px";  // Atur angka ini sesuai tinggi navbar kamu
+      } else {
+          navbar.style.top = "0";  // Tampilkan navbar saat scroll ke atas
+      }
+  
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Menghindari nilai negatif
+  });
+</script>
+ 
+
+  
+
+    <script src="script.js"></script>
+</body>
+</html>
